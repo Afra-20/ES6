@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Distructuring </title>
+</head>
+<body>
+<script>
+  const person = {
+    first: 'Afra',
+    last: 'banu',
+    city: 'Chennai',
+    twiiter: '@afra'
+  };
+
+  // const { first, last } = person;
+
+  const afra = {
+    first: 'Afra',
+    last: 'banu',
+    links: {
+      social: {
+        twitter: 'https://twitter.com/afra',
+        facebook: 'https://facebook.com/afra',
+      },
+      web: {
+        blog: 'https://afra.com'
+      }
+    }
+  }
+
+  const { twitter:tweet, facebook:fb } = afra.links.social;
+
+  const settings = { width: 300, color: 'black' }
+  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+
+  </script>
+</body>
+</html>
