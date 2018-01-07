@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Spread Examples </title>
+</head>
+<body>
+  <div class="people">
+    <p>Afra</p>
+    <p>Swar</p>
+    <p>Sharmi</p>
+  </div>
+  <script>
+       const people = Array.from(document.querySelectorAll('.people p'));
+       const names = people.map((person) => person.textContent );
+
+      const deepDish = {
+        pizzaName: 'Deep Dish',
+        size: 'Medium',
+        ingredients: ['Marinara', 'Italian Sausage', 'Dough', 'Cheese']
+      };
+
+        const shoppingList = ['Milk', 'Flour', ...deepDish.ingredients];
+        console.log(shoppingList);
+
+        const comments = [
+          { id: 208938, text: 'I love your dog' },
+          { id: 715478, text: 'Cuteee' },
+          { id: 652165, text: 'You are so dumb' },
+          { id: 982739, text: 'Nice work!' },
+        ];
+        const id = 652165;
+        const i = comments.findIndex(comment => comment.id === id);
+
+        const newComments = [...comments.slice(0,i), ...comments.slice(i + 1)];
+        console.log(newComments);
+
+  </script>
+</body>
+</html>

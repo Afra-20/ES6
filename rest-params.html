@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> The ...Rest params </title>
+</head>
+<body>
+  <script>
+    //  function convertCurrency(rate, tax, tip, ...amounts) {
+    //    console.log(rate, tax, tip, amounts);
+    //    return amounts.map(amount => amount * rate);
+    //  }
+
+    //  const amounts = convertCurrency(1.54,10,2,23,52,98);
+    //  console.log(amounts);
+
+    const runner = ['Afrah banu', 123, 5, 5.5, 3, 6];
+    const [name, id, ...runs] = runner;
+    console.log(name, id, runs);
+
+  </script>
+</body>
+</html>
